@@ -18,7 +18,7 @@ class CustomerDetails: NSObject {
     var kilometres:Float?
     var carType:String?
     var engineType:engineType = .engineTypePetrol
-    var yearOfManufacture:Date
+    var yearOfManufacture:Date = Date()
     
     override init() {
         super.init()

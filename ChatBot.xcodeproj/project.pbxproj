@@ -72,7 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				176A442221E104E9009521E8 /* appUIConstants.swift */,
-				8CF3C523202AFC39001E921E /* Chat Bot */,
+				8CF3C523202AFC39001E921E /* ChatBot */,
 				8CF3C522202AFC39001E921E /* Products */,
 				E89E3E989DF6895E8397F8FE /* Pods */,
 				7467EA8EA74B6D68EAF84514 /* Frameworks */,
@@ -87,7 +87,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8CF3C523202AFC39001E921E /* Chat Bot */ = {
+		8CF3C523202AFC39001E921E /* ChatBot */ = {
 			isa = PBXGroup;
 			children = (
 				176A442821E10845009521E8 /* CustomerDetails.swift */,
@@ -104,7 +104,7 @@
 				8CC18E3D202DCF1B00F54C1F /* SpeechManager.swift */,
 				C76D83A221E0E6EF006ED462 /* LoginViewController.swift */,
 			);
-			path = "Chat Bot";
+			path = ChatBot;
 			sourceTree = "<group>";
 		};
 		C76D83A621E0F8D0006ED462 /* Managers */ = {
