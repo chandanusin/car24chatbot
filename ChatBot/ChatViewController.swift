@@ -86,7 +86,7 @@ class ChatViewController: JSQMessagesViewController {
     
     func populateWithWelcomeMessage()
     {
-        self.addMessage(withId: "BotId", name: "Bot", text: "Hi I am Car24x7")
+        self.addMessage(withId: "BotId", name: "Bot", text: "Hey \(LoginManager.sharedInstance.getUserName()), I am Car24x7")
         self.finishReceivingMessage()
         self.addMessage(withId: "BotId", name: "Bot", text: "I am here to help you about anything related to buy and sell your car")
         self.finishReceivingMessage()
