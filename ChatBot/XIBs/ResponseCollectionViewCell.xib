@@ -22,7 +22,7 @@
                         <rect key="frame" x="202" y="0.0" width="135" height="93"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interested" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztc-nv-beV">
-                        <rect key="frame" x="0.0" y="5" width="77.5" height="20.5"/>
+                        <rect key="frame" x="5" y="5" width="77.5" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="77.5" id="w66-mr-MCp"/>
                             <constraint firstAttribute="height" constant="20.5" id="wVb-hI-FyM"/>
@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </switch>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAC-eI-3bw">
-                        <rect key="frame" x="0.0" y="40.5" width="77.5" height="20.5"/>
+                        <rect key="frame" x="5" y="40.5" width="77.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMR-s6-HFb">
-                        <rect key="frame" x="0.0" y="66" width="77.5" height="20.5"/>
+                        <rect key="frame" x="5" y="66" width="77.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDw-bD-cmY">
-                        <rect key="frame" x="0.0" y="91.5" width="77.5" height="20.5"/>
+                        <rect key="frame" x="5" y="91.5" width="77.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -72,7 +72,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aic-jH-PFv">
-                        <rect key="frame" x="0.0" y="117" width="77.5" height="20.5"/>
+                        <rect key="frame" x="5" y="117" width="77.5" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -112,7 +112,7 @@
                 <constraint firstItem="fQZ-GW-sGI" firstAttribute="centerX" secondItem="JyM-51-da0" secondAttribute="centerX" id="tcP-lc-ylS"/>
                 <constraint firstItem="GMR-s6-HFb" firstAttribute="width" secondItem="nAC-eI-3bw" secondAttribute="width" id="uMB-ju-alP"/>
                 <constraint firstItem="xL1-Mr-nc4" firstAttribute="top" secondItem="GMR-s6-HFb" secondAttribute="top" id="uO7-Jm-E6z"/>
-                <constraint firstItem="ztc-nv-beV" firstAttribute="leading" secondItem="JyM-51-da0" secondAttribute="leading" id="vvc-Aa-gj8"/>
+                <constraint firstItem="ztc-nv-beV" firstAttribute="leading" secondItem="JyM-51-da0" secondAttribute="leading" constant="5" id="vvc-Aa-gj8"/>
                 <constraint firstItem="axh-dL-Q8n" firstAttribute="top" secondItem="aic-jH-PFv" secondAttribute="top" id="wp5-ek-S6Y"/>
                 <constraint firstItem="aic-jH-PFv" firstAttribute="top" secondItem="oDw-bD-cmY" secondAttribute="bottom" constant="5" id="xSJ-nB-MfY"/>
                 <constraint firstItem="l0R-l5-PT6" firstAttribute="width" secondItem="JyM-51-da0" secondAttribute="width" multiplier="0.4" id="yUc-pW-hS4"/>
@@ -130,6 +130,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="cars24" width="728.4000244140625" height="136.32000732421875"/>
+        <image name="cars24" width="3035" height="568"/>
     </resources>
 </document>

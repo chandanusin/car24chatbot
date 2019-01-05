@@ -13,13 +13,13 @@
         <!--Login View Controller-->
         <scene sceneID="bo2-mU-HYp">
             <objects>
-                <viewController storyboardIdentifier="LoginVCId" id="sVm-bb-ztO" customClass="LoginViewController" customModule="Chat_Bot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVCId" id="sVm-bb-ztO" customClass="LoginViewController" customModule="ChatBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="loginVc" id="jpe-dR-J7y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TVR-Kq-1yb">
-                                <rect key="frame" x="121" y="261" width="133" height="165"/>
+                                <rect key="frame" x="121" y="231" width="133" height="165"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFm-aI-q6w">
                                         <rect key="frame" x="0.0" y="0.0" width="133" height="30"/>
@@ -55,7 +55,7 @@
                         <color key="backgroundColor" red="0.073919832759999998" green="0.14120655100000001" blue="0.24284184640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TVR-Kq-1yb" firstAttribute="centerX" secondItem="Wy5-oV-ogg" secondAttribute="centerX" id="rUg-g5-Lth"/>
-                            <constraint firstItem="TVR-Kq-1yb" firstAttribute="centerY" secondItem="Wy5-oV-ogg" secondAttribute="centerY" id="vnJ-QU-2fF"/>
+                            <constraint firstItem="TVR-Kq-1yb" firstAttribute="centerY" secondItem="Wy5-oV-ogg" secondAttribute="centerY" constant="-30" id="vnJ-QU-2fF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wy5-oV-ogg"/>
                     </view>
@@ -73,14 +73,30 @@
         <!--Chat View Controller-->
         <scene sceneID="SRD-sK-aYJ">
             <objects>
-                <viewController storyboardIdentifier="ChatVC" id="YsY-IU-o2H" customClass="ChatViewController" customModule="Chat_Bot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatVC" id="YsY-IU-o2H" customClass="ChatViewController" customModule="ChatBot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3xO-iK-tB9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ABE-JY-nb7">
+                                <rect key="frame" x="167.5" y="323.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="2KL-jx-xMV"/>
+                                    <constraint firstAttribute="height" constant="40" id="T9c-1g-huf"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ABE-JY-nb7" firstAttribute="centerY" secondItem="3xO-iK-tB9" secondAttribute="centerY" constant="10" id="438-1O-OSO"/>
+                            <constraint firstItem="ABE-JY-nb7" firstAttribute="centerX" secondItem="3xO-iK-tB9" secondAttribute="centerX" id="bF9-9i-gNT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JMF-XG-gpR"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ABE-JY-nb7" id="VHy-kb-jUY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="att-U4-00r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

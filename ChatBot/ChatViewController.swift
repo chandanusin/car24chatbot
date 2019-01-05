@@ -20,6 +20,7 @@ enum ChatWindowStatus
 class ChatViewController: JSQMessagesViewController {
     
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     var messages = [JSQMessage]()
     lazy var outgoingBubbleImageView: JSQMessagesBubbleImage = self.setupOutgoingBubble()
     lazy var incomingBubbleImageView: JSQMessagesBubbleImage = self.setupIncomingBubble()
@@ -28,7 +29,7 @@ class ChatViewController: JSQMessagesViewController {
     
     var chatWindowStatus : ChatWindowStatus = .maximised
     var botImageTapGesture: UITapGestureRecognizer?
-    
+    var indicator: UIActivityIndicatorView!
     //MARK: Lifecycle Methods
     override func viewDidLoad()
     {
@@ -49,6 +50,17 @@ class ChatViewController: JSQMessagesViewController {
         DispatchQueue.main.asyncAfter(deadline: deadlineTime, execute: {
             self.populateWithWelcomeMessage()
         })
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let view = ChatViewController.getTopViewController()?.view {
+            let activityView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            activityView.center = view.center
+            indicator = activityView
+            indicator.isHidden = true
+            view.addSubview(activityView)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -191,8 +203,11 @@ class ChatViewController: JSQMessagesViewController {
                         buyerDetails.brand = parameters["brand"]!.stringValue
                         buyerDetails.ownership = parameters["ownership"]!.stringValue
                         buyerDetails.carType = parameters["carType"]!.stringValue
-                        
+                        self.indicator.isHidden = false
+                        self.indicator.startAnimating()
                         TransactionManager.sharedInstance.getListOfCarDetailsWithBuyerDetails(details: buyerDetails, completion: { (list, error) in
+                            self.indicator.stopAnimating()
+                            self.indicator.isHidden = true
                             let chatVc = UIStoryboard(name: "Views", bundle: nil).instantiateViewController(withIdentifier: kViewStoryboardID) as? ResponseViewController
                             
                             UIView.animate(withDuration: 0.5) {
@@ -371,5 +386,17 @@ extension ChatViewController:SpeechManagerDelegate
     func onNewMessageRecieved(message: JSQMessage) {
         
         
+    }
+    
+    class func getTopViewController() -> UIViewController? {
+        var topViewController:UIViewController? = nil;
+        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            topViewController = topController;
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController;
+                topViewController = topController;
+            }
+        }
+        return topViewController;
     }
 }
