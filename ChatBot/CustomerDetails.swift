@@ -14,11 +14,12 @@ class CustomerDetails: NSObject {
     var location:String?
     var vehicleModel:String?
     var ownership:String?
-    var targetPrice:Float?
-    var kilometres:Float?
+    var targetPrice:Int?
+    var kilometres:Int?
     var carType:String?
-    var engineType:engineType = .engineTypePetrol
-    var yearOfManufacture:Date = Date()
+    var engineType:engineType? = nil
+    var yearOfManufacture:Int = 0
+    var brand: String?
     
     override init() {
         super.init()

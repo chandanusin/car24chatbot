@@ -12,14 +12,15 @@ class ListedCarDetails: NSObject {
     
     var ownerName:String = ""
     var brand:String = ""
+    var model : String = ""
     var vehicleModel:String = ""
     var location:String = ""
     var ownership:String = ""
-    var price:String = ""
+    var price:Int = 0
     
     var carType:String = ""
     
-    var engineType: String = ""
+    var engineType: engineType = .engineTypePetrol
     
     var kmsDrive: Int = 0
     

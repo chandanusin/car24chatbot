@@ -401,8 +401,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SJZCXB7Z8V;
-				INFOPLIST_FILE = "Chat Bot/Info.plist";
+				DEVELOPMENT_TEAM = XJ853555CF;
+				INFOPLIST_FILE = "$(SRCROOT)/ChatBot/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalguys.chatbotCAD;
@@ -422,8 +422,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SJZCXB7Z8V;
-				INFOPLIST_FILE = "Chat Bot/Info.plist";
+				DEVELOPMENT_TEAM = XJ853555CF;
+				INFOPLIST_FILE = "$(SRCROOT)/ChatBot/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.digitalguys.chatbotCAD;

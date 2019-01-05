@@ -17,6 +17,11 @@ class TransactionManager: NSObject {
         return instance
     }()
     
+    func getListOfCarDetailsWithBuyerDetails(details: BuyerDetails,  completion : @ escaping (_ result: [ListedCarDetails], _ error: Error?) -> Void) {
+        
+        NetworkManager.sharedInstance.getListOfCarAvailableWithDetails(withBuyerDetails: details, completion: completion);
+    }
+    
     
 
 }

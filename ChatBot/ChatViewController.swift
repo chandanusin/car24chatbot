@@ -171,6 +171,33 @@ class ChatViewController: JSQMessagesViewController {
         
         request?.setMappedCompletionBlockSuccess({ (request, response) in
             let response = response as! AIResponse
+            
+            if  response.result.actionIncomplete == 0 {
+                if response.result.metadata.intentName == "Buy"{
+                    if let parameters = response.result.parameters as? [String:AIResponseParameter] {
+                        let buyerDetails = BuyerDetails()
+                        var engineType: engineType = .engineTypePetrol;
+                        if  parameters["engineType"]!.stringValue == "diesel" {
+                            engineType = .engineTypeDiesel
+                        } else if parameters["engineType"]!.stringValue == "petrol"  {
+                            engineType = .engineTypePetrol
+                        } else  {
+                            engineType = .engineTypeElectric
+                        }
+                        buyerDetails.engineType = engineType
+                        buyerDetails.kilometres = parameters["kmsDrive"]!.numberValue as! Int
+                        buyerDetails.targetPrice = parameters["budget"]!.numberValue as! Int
+                        buyerDetails.vehicleModel = parameters["model"]!.stringValue
+                        buyerDetails.brand = parameters["brand"]!.stringValue
+                        buyerDetails.ownership = parameters["ownership"]!.stringValue
+                        buyerDetails.carType = parameters["carType"]!.stringValue
+                        
+                        TransactionManager.sharedInstance.getListOfCarDetailsWithBuyerDetails(details: buyerDetails, completion: { (list, error) in
+                            
+                        })
+                    }
+                }
+            }
             if response.result.action == "tell.about"
             {
                 if let parameters = response.result.parameters as? [String:AIResponseParameter]
