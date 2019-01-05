@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176A442321E104E9009521E8 /* appUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A442221E104E9009521E8 /* appUIConstants.swift */; };
 		8CB5D935202B22AD004AEC1F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5D934202B22AD004AEC1F /* ChatViewController.swift */; };
 		8CC18E3E202DCF1B00F54C1F /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC18E3D202DCF1B00F54C1F /* SpeechManager.swift */; };
 		8CF3C525202AFC3A001E921E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF3C524202AFC3A001E921E /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		176A442221E104E9009521E8 /* appUIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appUIConstants.swift; sourceTree = "<group>"; };
 		288AB888E45F0395D78A4E2B /* Pods_Chat_Bot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_Bot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E203D75D7A05C4656D5BDD /* Pods-Chat Bot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat Bot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat Bot/Pods-Chat Bot.debug.xcconfig"; sourceTree = "<group>"; };
 		749FD9D774B58C97E447FC6F /* Pods-Chat Bot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat Bot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat Bot/Pods-Chat Bot.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		8CF3C518202AFC39001E921E = {
 			isa = PBXGroup;
 			children = (
+				176A442221E104E9009521E8 /* appUIConstants.swift */,
 				8CF3C523202AFC39001E921E /* Chat Bot */,
 				8CF3C522202AFC39001E921E /* Products */,
 				E89E3E989DF6895E8397F8FE /* Pods */,
@@ -245,6 +248,7 @@
 				8CC18E3E202DCF1B00F54C1F /* SpeechManager.swift in Sources */,
 				C76D83B421E10399006ED462 /* ListedCarDetails.swift in Sources */,
 				C76D83B221E1021F006ED462 /* BuyerDetails.swift in Sources */,
+				176A442321E104E9009521E8 /* appUIConstants.swift in Sources */,
 				C76D83AA21E0F9E9006ED462 /* TransactionManager.swift in Sources */,
 				8CB5D935202B22AD004AEC1F /* ChatViewController.swift in Sources */,
 				C76D83A321E0E6EF006ED462 /* LoginViewController.swift in Sources */,
