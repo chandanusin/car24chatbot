@@ -211,7 +211,7 @@ class ChatViewController: JSQMessagesViewController {
                             let chatVc = UIStoryboard(name: "Views", bundle: nil).instantiateViewController(withIdentifier: kViewStoryboardID) as? ResponseViewController
                             
                             UIView.animate(withDuration: 0.5) {
-                                chatVc?.view.frame = CGRect(x: self.view.frame.origin.x, y: 20, width: self.view.frame.size.width, height: self.view.frame.size.height - 20)
+                                chatVc?.view.frame = CGRect(x: self.view.frame.origin.x, y:0, width: self.view.frame.size.width, height: self.view.frame.size.height)
                                 self.view.addSubview((chatVc?.view)!)
                                 self.addChildViewController(chatVc!)
                                 self.didMove(toParentViewController: chatVc)
