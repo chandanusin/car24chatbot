@@ -34,7 +34,7 @@
 		749FD9D774B58C97E447FC6F /* Pods-Chat Bot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat Bot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat Bot/Pods-Chat Bot.release.xcconfig"; sourceTree = "<group>"; };
 		8CB5D934202B22AD004AEC1F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8CC18E3D202DCF1B00F54C1F /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
-		8CF3C521202AFC39001E921E /* Chat Bot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chat Bot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CF3C521202AFC39001E921E /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF3C524202AFC3A001E921E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CF3C529202AFC3A001E921E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CF3C52B202AFC3A001E921E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		8CF3C522202AFC39001E921E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8CF3C521202AFC39001E921E /* Chat Bot.app */,
+				8CF3C521202AFC39001E921E /* ChatBot.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,9 +129,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8CF3C520202AFC39001E921E /* Chat Bot */ = {
+		8CF3C520202AFC39001E921E /* ChatBot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8CF3C533202AFC3A001E921E /* Build configuration list for PBXNativeTarget "Chat Bot" */;
+			buildConfigurationList = 8CF3C533202AFC3A001E921E /* Build configuration list for PBXNativeTarget "ChatBot" */;
 			buildPhases = (
 				8BEA54DBC79947BD29A32976 /* [CP] Check Pods Manifest.lock */,
 				8CF3C51D202AFC39001E921E /* Sources */,
@@ -144,9 +144,9 @@
 			);
 			dependencies = (
 			);
-			name = "Chat Bot";
+			name = ChatBot;
 			productName = "NBA Bot";
-			productReference = 8CF3C521202AFC39001E921E /* Chat Bot.app */;
+			productReference = 8CF3C521202AFC39001E921E /* ChatBot.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -165,7 +165,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8CF3C51C202AFC39001E921E /* Build configuration list for PBXProject "Chat Bot" */;
+			buildConfigurationList = 8CF3C51C202AFC39001E921E /* Build configuration list for PBXProject "ChatBot" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -178,7 +178,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8CF3C520202AFC39001E921E /* Chat Bot */,
+				8CF3C520202AFC39001E921E /* ChatBot */,
 			);
 		};
 /* End PBXProject section */
@@ -398,13 +398,14 @@
 			baseConfigurationReference = 30E203D75D7A05C4656D5BDD /* Pods-Chat Bot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29X3FG4322;
+				DEVELOPMENT_TEAM = SJZCXB7Z8V;
 				INFOPLIST_FILE = "Chat Bot/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.digitalguys.chatbot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digitalguys.chatbotCAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -418,13 +419,14 @@
 			baseConfigurationReference = 749FD9D774B58C97E447FC6F /* Pods-Chat Bot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 29X3FG4322;
+				DEVELOPMENT_TEAM = SJZCXB7Z8V;
 				INFOPLIST_FILE = "Chat Bot/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.digitalguys.chatbot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.digitalguys.chatbotCAD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -436,7 +438,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8CF3C51C202AFC39001E921E /* Build configuration list for PBXProject "Chat Bot" */ = {
+		8CF3C51C202AFC39001E921E /* Build configuration list for PBXProject "ChatBot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8CF3C531202AFC3A001E921E /* Debug */,
@@ -445,7 +447,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8CF3C533202AFC3A001E921E /* Build configuration list for PBXNativeTarget "Chat Bot" */ = {
+		8CF3C533202AFC3A001E921E /* Build configuration list for PBXNativeTarget "ChatBot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8CF3C534202AFC3A001E921E /* Debug */,
