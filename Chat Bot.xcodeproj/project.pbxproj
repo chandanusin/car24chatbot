@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		176A442321E104E9009521E8 /* appUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A442221E104E9009521E8 /* appUIConstants.swift */; };
+		176A442521E1069E009521E8 /* Sellerdetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A442421E1069E009521E8 /* Sellerdetails.swift */; };
+		176A442721E10770009521E8 /* CustomerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A442621E10770009521E8 /* CustomerDetails.swift */; };
 		8CB5D935202B22AD004AEC1F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5D934202B22AD004AEC1F /* ChatViewController.swift */; };
 		8CC18E3E202DCF1B00F54C1F /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC18E3D202DCF1B00F54C1F /* SpeechManager.swift */; };
 		8CF3C525202AFC3A001E921E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF3C524202AFC3A001E921E /* AppDelegate.swift */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		176A442221E104E9009521E8 /* appUIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appUIConstants.swift; sourceTree = "<group>"; };
+		176A442421E1069E009521E8 /* Sellerdetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sellerdetails.swift; sourceTree = "<group>"; };
+		176A442621E10770009521E8 /* CustomerDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerDetails.swift; sourceTree = "<group>"; };
 		288AB888E45F0395D78A4E2B /* Pods_Chat_Bot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_Bot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E203D75D7A05C4656D5BDD /* Pods-Chat Bot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat Bot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat Bot/Pods-Chat Bot.debug.xcconfig"; sourceTree = "<group>"; };
 		749FD9D774B58C97E447FC6F /* Pods-Chat Bot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat Bot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat Bot/Pods-Chat Bot.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				C76D83B121E1021F006ED462 /* BuyerDetails.swift */,
+				176A442621E10770009521E8 /* CustomerDetails.swift */,
+				176A442421E1069E009521E8 /* Sellerdetails.swift */,
 				C76D83A621E0F8D0006ED462 /* Managers */,
 				8CF3C524202AFC3A001E921E /* AppDelegate.swift */,
 				8CF3C528202AFC3A001E921E /* Main.storyboard */,
@@ -238,6 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C76D83A821E0F8D0006ED462 /* LoginManager.swift in Sources */,
+				176A442521E1069E009521E8 /* Sellerdetails.swift in Sources */,
+				176A442721E10770009521E8 /* CustomerDetails.swift in Sources */,
 				8CC18E3E202DCF1B00F54C1F /* SpeechManager.swift in Sources */,
 				C76D83B221E1021F006ED462 /* BuyerDetails.swift in Sources */,
 				176A442321E104E9009521E8 /* appUIConstants.swift in Sources */,

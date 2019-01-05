@@ -8,21 +8,11 @@
 
 import Foundation
 
-class BuyerDetails: NSObject {
-
-    var name:String?
-    var location:String?
-    var vehicleModel:String?
-    var ownership:String?
-    var targetPrice:Float?
-    var kilometres:Float?
-    var carType:String?
-    var engineType:engineType = .engineTypePetrol
+class BuyerDetails: CustomerDetails {
     
     override init() {
         super.init()
     }
-    
     
 }
 
