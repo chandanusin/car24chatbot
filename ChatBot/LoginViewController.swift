@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
         
         LoginManager.sharedInstance.login(userName: userName.text!, mobileNumber: contactNum.text, emailId: emailId?.text)
         
-        let chatVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChatVC") as? ChatViewController
+        let chatVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: kLoginVCStoryboardID) as? ChatViewController
         
         UIView.animate(withDuration: 0.5) {
             chatVc?.view.frame = CGRect(x: self.view.frame.origin.x, y: 20, width: self.view.frame.size.width, height: self.view.frame.size.height - 20)
