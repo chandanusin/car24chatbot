@@ -17,6 +17,7 @@
 		C76D83A321E0E6EF006ED462 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D83A221E0E6EF006ED462 /* LoginViewController.swift */; };
 		C76D83A821E0F8D0006ED462 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D83A721E0F8D0006ED462 /* LoginManager.swift */; };
 		C76D83AA21E0F9E9006ED462 /* TransactionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D83A921E0F9E9006ED462 /* TransactionManager.swift */; };
+		C76D83B221E1021F006ED462 /* BuyerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D83B121E1021F006ED462 /* BuyerDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C76D83A221E0E6EF006ED462 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C76D83A721E0F8D0006ED462 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		C76D83A921E0F9E9006ED462 /* TransactionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionManager.swift; sourceTree = "<group>"; };
+		C76D83B121E1021F006ED462 /* BuyerDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyerDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		8CF3C523202AFC39001E921E /* Chat Bot */ = {
 			isa = PBXGroup;
 			children = (
+				C76D83B121E1021F006ED462 /* BuyerDetails.swift */,
 				C76D83A621E0F8D0006ED462 /* Managers */,
 				8CF3C524202AFC3A001E921E /* AppDelegate.swift */,
 				8CF3C528202AFC3A001E921E /* Main.storyboard */,
@@ -233,6 +236,7 @@
 			files = (
 				C76D83A821E0F8D0006ED462 /* LoginManager.swift in Sources */,
 				8CC18E3E202DCF1B00F54C1F /* SpeechManager.swift in Sources */,
+				C76D83B221E1021F006ED462 /* BuyerDetails.swift in Sources */,
 				C76D83AA21E0F9E9006ED462 /* TransactionManager.swift in Sources */,
 				8CB5D935202B22AD004AEC1F /* ChatViewController.swift in Sources */,
 				C76D83A321E0E6EF006ED462 /* LoginViewController.swift in Sources */,
