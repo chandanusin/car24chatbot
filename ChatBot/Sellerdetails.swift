@@ -10,6 +10,11 @@ import Foundation
 
 class SellerDetails: CustomerDetails {
     
+    var addId = UUID().uuidString
+    var extra4 = ""
+    var extra5 = ""
+    var pincode = 0
+    var image = "test.url"
     override init() {
         super.init()
     }
