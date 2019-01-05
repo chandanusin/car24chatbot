@@ -85,6 +85,78 @@ class NetworkManager: NSObject {
         }
     }
 
+    func postSellerDetails(witDetails: SellerDetails, completion : @escaping ( _ error: Error?) -> Void ) {
+        // 1
+        dataTask?.cancel()
+        // 2
+        if var urlComponents = URLComponents(string: "http://10.2.41.83/sell.php") {
+            
+            var query = ""
+            if let name = witDetails.name {
+                
+                query =  "ownerName=\(name)&"
+            }
+            if let  detail = witDetails.location  {
+                query = query + "location=\(detail)&"
+            }
+            if let detail = witDetails.vehicleModel {
+                query = query + "model=\(detail)&"
+            }
+            if let detail = witDetails.brand {
+                query = query + "brand=\(detail)&"
+            }
+            if let detail = witDetails.ownership {
+                query = query + "ownership=\(detail)&"
+            }
+            if let detail = witDetails.targetPrice {
+                query = query + "price=\(detail)&"
+            }
+            if let detail =  witDetails.kilometres {
+                query = query + "kmsDriven=\(detail)&"
+            }
+            if let detail = witDetails.engineType {
+                query = query + "engineType=\(detail.rawValue)&"
+            }
+            if let detail =   witDetails.carType {
+                query = query + "carType=\(detail)&"
+            }
+            if witDetails.yearOfManufacture != 0 {
+                query = query + "yearOfManufacture=\( witDetails.yearOfManufacture)&"
+            }
+            
+            query = query + "image=\( witDetails.image)&"
+            query = query + "extra4=\( witDetails.extra4)&"
+            query = query + "extra5=\( witDetails.extra5)&"
+            query = query + "pincode=\( witDetails.pincode)&"
+            query = query + "addId=\( witDetails.addId)&"
+            
+            query.removeLast()
+            urlComponents.query = query
+            // 3
+            guard let url = urlComponents.url else { return }
+            // 4
+            dataTask = defaultSession.dataTask(with: url) { data, response, error in
+                defer { self.dataTask = nil }
+                // 5
+                if let error = error {
+                    DispatchQueue.main.async {
+                        completion(error)
+                    }
+                } else if let data = data,
+                    let response = response as? HTTPURLResponse,
+                    response.statusCode == 200 {
+                    let resultList =  self.updateSearchResults(data)
+                    // 6
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
+                }
+            }
+            // 7
+            dataTask?.resume()
+        }
+    }
+    
     
     fileprivate func updateSearchResults(_ data: Data) -> [ListedCarDetails]{
         var response: [AnyObject]?

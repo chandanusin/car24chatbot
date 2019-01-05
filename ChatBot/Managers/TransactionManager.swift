@@ -22,6 +22,11 @@ class TransactionManager: NSObject {
         NetworkManager.sharedInstance.getListOfCarAvailableWithDetails(withBuyerDetails: details, completion: completion);
     }
     
+    func postSellerDetails(details: SellerDetails,  completion : @ escaping (_ error: Error?) -> Void) {
+        
+        NetworkManager.sharedInstance.postSellerDetails(witDetails: details, completion: completion);
+    }
+    
     
 
 }
