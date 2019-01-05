@@ -203,6 +203,7 @@ class ChatViewController: JSQMessagesViewController {
                         buyerDetails.brand = parameters["brand"]!.stringValue
                         buyerDetails.ownership = parameters["ownership"]!.stringValue
                         buyerDetails.carType = parameters["carType"]!.stringValue
+                        buyerDetails.carType = parameters["yearOfManufacture"]!.stringValue
                         self.indicator.isHidden = false
                         self.indicator.startAnimating()
                         TransactionManager.sharedInstance.getListOfCarDetailsWithBuyerDetails(details: buyerDetails, completion: { (list, error) in
@@ -219,6 +220,37 @@ class ChatViewController: JSQMessagesViewController {
                             }
                         })
                     }
+                } else if response.result.metadata.intentName == "Sell"{
+                        
+                    if let parameters = response.result.parameters as? [String:AIResponseParameter] {
+                        let sellerDetails = SellerDetails()
+                        var engineType: engineType = .engineTypePetrol;
+                        if  parameters["engineType"]!.stringValue == "diesel" {
+                            engineType = .engineTypeDiesel
+                        } else if parameters["engineType"]!.stringValue == "petrol"  {
+                            engineType = .engineTypePetrol
+                        } else  {
+                            engineType = .engineTypeElectric
+                        }
+                        sellerDetails.engineType = engineType
+                        sellerDetails.kilometres = parameters["kmsDrive"]!.numberValue as! Int
+                        sellerDetails.targetPrice = parameters["targetPrice"]!.numberValue as! Int
+                        sellerDetails.vehicleModel = parameters["modelName"]!.stringValue
+                        sellerDetails.brand = parameters["brandName"]!.stringValue
+                        sellerDetails.ownership = "old"
+                        sellerDetails.carType = parameters["carType"]!.stringValue
+                        sellerDetails.yearOfManufacture = parameters["yearOfManufacture"]!.numberValue as! Int
+                        sellerDetails.location = parameters["locationName"]!.stringValue
+                        sellerDetails.name = LoginManager.sharedInstance.getUserName()
+                        self.indicator.isHidden = false
+                        self.indicator.startAnimating()
+                        TransactionManager.sharedInstance.postSellerDetails(details: sellerDetails, completion: { ( error) in
+                            self.indicator.stopAnimating()
+                            self.indicator.isHidden = true
+                          
+                        })
+                    }
+                    
                 }
             }
             if response.result.action == "tell.about"

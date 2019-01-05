@@ -11,8 +11,8 @@ import Foundation
 class SellerDetails: CustomerDetails {
     
     var addId = UUID().uuidString
-    var extra4 = ""
-    var extra5 = ""
+    var extra4 = "0"
+    var extra5 = "0"
     var pincode = 0
     var image = "test.url"
     override init() {
