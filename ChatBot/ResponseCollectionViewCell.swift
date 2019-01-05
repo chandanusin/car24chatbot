@@ -27,4 +27,13 @@ class ResponseCollectionViewCell: UICollectionViewCell {
         
     }
     
+    func configureCell(detail: ListedCarDetails) {
+        interestedSwitch.isOn = false
+        modelLabel.text = detail.model
+        brandNameLabel.text = detail.brand
+        yearOfManufacture.text = detail.yearOfManufacture.description
+        priceLabel.text = "\(detail.price)"
+        
+    }
+    
 }

@@ -13,7 +13,7 @@
 		176A442D21E10D6F009521E8 /* ResponseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A442C21E10D6F009521E8 /* ResponseCollectionViewCell.swift */; };
 		176A442F21E10D84009521E8 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A442E21E10D84009521E8 /* ResponseViewController.swift */; };
 		176A443821E1124C009521E8 /* Views.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176A443721E1124C009521E8 /* Views.storyboard */; };
-		176A443A21E1153E009521E8 /* VideoAssetCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176A443921E1153E009521E8 /* VideoAssetCollectionCell.xib */; };
+		176A443A21E1153E009521E8 /* ResponseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176A443921E1153E009521E8 /* ResponseCollectionViewCell.xib */; };
 		8CB5D935202B22AD004AEC1F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5D934202B22AD004AEC1F /* ChatViewController.swift */; };
 		8CC18E3E202DCF1B00F54C1F /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC18E3D202DCF1B00F54C1F /* SpeechManager.swift */; };
 		8CF3C525202AFC3A001E921E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF3C524202AFC3A001E921E /* AppDelegate.swift */; };
@@ -36,7 +36,7 @@
 		176A442C21E10D6F009521E8 /* ResponseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCollectionViewCell.swift; sourceTree = "<group>"; };
 		176A442E21E10D84009521E8 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
 		176A443721E1124C009521E8 /* Views.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Views.storyboard; sourceTree = "<group>"; };
-		176A443921E1153E009521E8 /* VideoAssetCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoAssetCollectionCell.xib; sourceTree = "<group>"; };
+		176A443921E1153E009521E8 /* ResponseCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResponseCollectionViewCell.xib; sourceTree = "<group>"; };
 		288AB888E45F0395D78A4E2B /* Pods_Chat_Bot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_Bot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E203D75D7A05C4656D5BDD /* Pods-Chat Bot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat Bot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat Bot/Pods-Chat Bot.debug.xcconfig"; sourceTree = "<group>"; };
 		749FD9D774B58C97E447FC6F /* Pods-Chat Bot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat Bot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat Bot/Pods-Chat Bot.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		176A443521E11173009521E8 /* XIBs */ = {
 			isa = PBXGroup;
 			children = (
-				176A443921E1153E009521E8 /* VideoAssetCollectionCell.xib */,
+				176A443921E1153E009521E8 /* ResponseCollectionViewCell.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				176A443A21E1153E009521E8 /* VideoAssetCollectionCell.xib in Resources */,
+				176A443A21E1153E009521E8 /* ResponseCollectionViewCell.xib in Resources */,
 				8CF3C52F202AFC3A001E921E /* LaunchScreen.storyboard in Resources */,
 				176A443821E1124C009521E8 /* Views.storyboard in Resources */,
 				8CF3C52C202AFC3A001E921E /* Assets.xcassets in Resources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResponseViewController: UICollectionViewController {
+class ResponseViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     //Mark: - outlets
     @IBOutlet weak var responseCollectionView: UICollectionView!
@@ -30,19 +30,22 @@ class ResponseViewController: UICollectionViewController {
     }
     
     func reload() {
-        collectionView?.reloadData()
+        responseCollectionView?.reloadData()
     }
     
     func setModelData(_ data:[Any]) {
         self.modelData = data
+        DispatchQueue.main.async {
+            self.reload()
+        }
     }
     
     //Mark: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        self.responseCollectionView.delegate = self;
-        self.responseCollectionView.dataSource = self;
+        self.responseCollectionView.delegate = self as! UICollectionViewDelegate;
+        self.responseCollectionView.dataSource = self as! UICollectionViewDataSource;
         self.responseCollectionView.allowsMultipleSelection = true;
         
         self.registerVideoCollectionViewClass(ResponseCollectionViewCell.self,
@@ -68,19 +71,23 @@ class ResponseViewController: UICollectionViewController {
     }
     
     @IBAction func didClickClose(sender: AnyObject) {
-       self.dismiss(animated: false, completion: nil)
+        self.removeFromParentViewController()
+        self.view.removeFromSuperview()
     }
 }
 
 extension ResponseViewController {
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.modelData.count
+        //return 10
     }
     
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kResponseCollectionViewCellID, for: indexPath) as! ResponseCollectionViewCell
-        
+        if let detail = modelData[indexPath.row] as? ListedCarDetails {
+            cell.configureCell(detail: detail)
+        }
         return cell
     }
     

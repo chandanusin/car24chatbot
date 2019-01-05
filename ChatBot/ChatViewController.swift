@@ -193,7 +193,15 @@ class ChatViewController: JSQMessagesViewController {
                         buyerDetails.carType = parameters["carType"]!.stringValue
                         
                         TransactionManager.sharedInstance.getListOfCarDetailsWithBuyerDetails(details: buyerDetails, completion: { (list, error) in
+                            let chatVc = UIStoryboard(name: "Views", bundle: nil).instantiateViewController(withIdentifier: kViewStoryboardID) as? ResponseViewController
                             
+                            UIView.animate(withDuration: 0.5) {
+                                chatVc?.view.frame = CGRect(x: self.view.frame.origin.x, y: 20, width: self.view.frame.size.width, height: self.view.frame.size.height - 20)
+                                self.view.addSubview((chatVc?.view)!)
+                                self.addChildViewController(chatVc!)
+                                self.didMove(toParentViewController: chatVc)
+                                chatVc?.setModelData(list)
+                            }
                         })
                     }
                 }
