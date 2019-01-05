@@ -8,6 +8,11 @@
 
 import Foundation
 
+let kLoginVCStoryboardID = "ChatVC"
+let kViewStoryboardID = "ViewStoryBoardId"
+let kResponseCollectionViewCellID = "ResponseCollectionViewCell"
+
+
 enum engineType : Int {
     case engineTypePetrol   = 0
     case engineTypeDiesel
@@ -26,5 +31,7 @@ enum engineType : Int {
         }
     }
 }
+
+
 
 

@@ -10,6 +10,10 @@
 		176A442321E104E9009521E8 /* appUIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A442221E104E9009521E8 /* appUIConstants.swift */; };
 		176A442A21E10845009521E8 /* CustomerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A442821E10845009521E8 /* CustomerDetails.swift */; };
 		176A442B21E10845009521E8 /* Sellerdetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A442921E10845009521E8 /* Sellerdetails.swift */; };
+		176A442D21E10D6F009521E8 /* ResponseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A442C21E10D6F009521E8 /* ResponseCollectionViewCell.swift */; };
+		176A442F21E10D84009521E8 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176A442E21E10D84009521E8 /* ResponseViewController.swift */; };
+		176A443821E1124C009521E8 /* Views.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176A443721E1124C009521E8 /* Views.storyboard */; };
+		176A443A21E1153E009521E8 /* VideoAssetCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176A443921E1153E009521E8 /* VideoAssetCollectionCell.xib */; };
 		8CB5D935202B22AD004AEC1F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5D934202B22AD004AEC1F /* ChatViewController.swift */; };
 		8CC18E3E202DCF1B00F54C1F /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC18E3D202DCF1B00F54C1F /* SpeechManager.swift */; };
 		8CF3C525202AFC3A001E921E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF3C524202AFC3A001E921E /* AppDelegate.swift */; };
@@ -29,6 +33,10 @@
 		176A442221E104E9009521E8 /* appUIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appUIConstants.swift; sourceTree = "<group>"; };
 		176A442821E10845009521E8 /* CustomerDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerDetails.swift; sourceTree = "<group>"; };
 		176A442921E10845009521E8 /* Sellerdetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sellerdetails.swift; sourceTree = "<group>"; };
+		176A442C21E10D6F009521E8 /* ResponseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCollectionViewCell.swift; sourceTree = "<group>"; };
+		176A442E21E10D84009521E8 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
+		176A443721E1124C009521E8 /* Views.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Views.storyboard; sourceTree = "<group>"; };
+		176A443921E1153E009521E8 /* VideoAssetCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoAssetCollectionCell.xib; sourceTree = "<group>"; };
 		288AB888E45F0395D78A4E2B /* Pods_Chat_Bot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chat_Bot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E203D75D7A05C4656D5BDD /* Pods-Chat Bot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat Bot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chat Bot/Pods-Chat Bot.debug.xcconfig"; sourceTree = "<group>"; };
 		749FD9D774B58C97E447FC6F /* Pods-Chat Bot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chat Bot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chat Bot/Pods-Chat Bot.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		176A443521E11173009521E8 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				176A443921E1153E009521E8 /* VideoAssetCollectionCell.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		176A443621E11194009521E8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				176A443721E1124C009521E8 /* Views.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		7467EA8EA74B6D68EAF84514 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +114,8 @@
 		8CF3C523202AFC39001E921E /* ChatBot */ = {
 			isa = PBXGroup;
 			children = (
+				176A443621E11194009521E8 /* Storyboards */,
+				176A443521E11173009521E8 /* XIBs */,
 				176A442821E10845009521E8 /* CustomerDetails.swift */,
 				176A442921E10845009521E8 /* Sellerdetails.swift */,
 				C76D83B121E1021F006ED462 /* BuyerDetails.swift */,
@@ -103,6 +129,8 @@
 				8CB5D934202B22AD004AEC1F /* ChatViewController.swift */,
 				8CC18E3D202DCF1B00F54C1F /* SpeechManager.swift */,
 				C76D83A221E0E6EF006ED462 /* LoginViewController.swift */,
+				176A442C21E10D6F009521E8 /* ResponseCollectionViewCell.swift */,
+				176A442E21E10D84009521E8 /* ResponseViewController.swift */,
 			);
 			path = ChatBot;
 			sourceTree = "<group>";
@@ -188,7 +216,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176A443A21E1153E009521E8 /* VideoAssetCollectionCell.xib in Resources */,
 				8CF3C52F202AFC3A001E921E /* LaunchScreen.storyboard in Resources */,
+				176A443821E1124C009521E8 /* Views.storyboard in Resources */,
 				8CF3C52C202AFC3A001E921E /* Assets.xcassets in Resources */,
 				8CF3C52A202AFC3A001E921E /* Main.storyboard in Resources */,
 			);
@@ -252,9 +282,11 @@
 				C76D83B621E10628006ED462 /* NetworkManager.swift in Sources */,
 				C76D83A821E0F8D0006ED462 /* LoginManager.swift in Sources */,
 				8CC18E3E202DCF1B00F54C1F /* SpeechManager.swift in Sources */,
+				176A442F21E10D84009521E8 /* ResponseViewController.swift in Sources */,
 				C76D83B421E10399006ED462 /* ListedCarDetails.swift in Sources */,
 				C76D83B221E1021F006ED462 /* BuyerDetails.swift in Sources */,
 				176A442321E104E9009521E8 /* appUIConstants.swift in Sources */,
+				176A442D21E10D6F009521E8 /* ResponseCollectionViewCell.swift in Sources */,
 				C76D83AA21E0F9E9006ED462 /* TransactionManager.swift in Sources */,
 				176A442B21E10845009521E8 /* Sellerdetails.swift in Sources */,
 				8CB5D935202B22AD004AEC1F /* ChatViewController.swift in Sources */,
