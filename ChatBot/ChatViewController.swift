@@ -86,7 +86,7 @@ class ChatViewController: JSQMessagesViewController {
     
     func populateWithWelcomeMessage()
     {
-        self.addMessage(withId: "BotId", name: "Bot", text: "Hi I am Car24x7")
+        self.addMessage(withId: "BotId", name: "Bot", text: "Hey \(LoginManager.sharedInstance.getUserName()), I am Car24x7")
         self.finishReceivingMessage()
         self.addMessage(withId: "BotId", name: "Bot", text: "I am here to help you about anything related to buy and sell your car")
         self.finishReceivingMessage()
@@ -212,7 +212,7 @@ class ChatViewController: JSQMessagesViewController {
                             let chatVc = UIStoryboard(name: "Views", bundle: nil).instantiateViewController(withIdentifier: kViewStoryboardID) as? ResponseViewController
                             
                             UIView.animate(withDuration: 0.5) {
-                                chatVc?.view.frame = CGRect(x: self.view.frame.origin.x, y: 20, width: self.view.frame.size.width, height: self.view.frame.size.height - 20)
+                                chatVc?.view.frame = CGRect(x: self.view.frame.origin.x, y:0, width: self.view.frame.size.width, height: self.view.frame.size.height)
                                 self.view.addSubview((chatVc?.view)!)
                                 self.addChildViewController(chatVc!)
                                 self.didMove(toParentViewController: chatVc)
