@@ -54,6 +54,12 @@
                                     <action selector="didClickCloseWithSender:" destination="INj-QQ-dal" eventType="touchUpInside" id="CJo-Gn-JQs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Dream Cars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daN-UB-Bdh">
+                                <rect key="frame" x="122.5" y="43" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -62,7 +68,9 @@
                             <constraint firstItem="L3p-oU-nYF" firstAttribute="top" secondItem="uzC-O7-Dji" secondAttribute="top" id="WeS-3x-lqT"/>
                             <constraint firstItem="vgb-D5-tVM" firstAttribute="trailing" secondItem="tmP-zr-XX9" secondAttribute="trailing" id="eKf-BC-pkz"/>
                             <constraint firstItem="vgb-D5-tVM" firstAttribute="top" secondItem="tmP-zr-XX9" secondAttribute="top" constant="80" id="gxv-Gw-GtF"/>
+                            <constraint firstItem="daN-UB-Bdh" firstAttribute="centerX" secondItem="tmP-zr-XX9" secondAttribute="centerX" id="iJC-vq-s69"/>
                             <constraint firstItem="vgb-D5-tVM" firstAttribute="leading" secondItem="tmP-zr-XX9" secondAttribute="leading" id="kYM-19-jOw"/>
+                            <constraint firstItem="daN-UB-Bdh" firstAttribute="top" secondItem="uzC-O7-Dji" secondAttribute="top" constant="23" id="xIb-RS-eDh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uzC-O7-Dji"/>
                     </view>

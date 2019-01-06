@@ -203,7 +203,7 @@ class ChatViewController: JSQMessagesViewController {
                         buyerDetails.brand = parameters["brand"]!.stringValue
                         buyerDetails.ownership = parameters["ownership"]!.stringValue
                         buyerDetails.carType = parameters["carType"]!.stringValue
-                        buyerDetails.carType = parameters["yearOfManufacture"]!.stringValue
+                        buyerDetails.yearOfManufacture = parameters["yearOfManufacture"]!.numberValue as! Int
                         self.indicator.isHidden = false
                         self.indicator.startAnimating()
                         TransactionManager.sharedInstance.getListOfCarDetailsWithBuyerDetails(details: buyerDetails, completion: { (list, error) in
@@ -247,6 +247,16 @@ class ChatViewController: JSQMessagesViewController {
                         TransactionManager.sharedInstance.postSellerDetails(details: sellerDetails, completion: { ( error) in
                             self.indicator.stopAnimating()
                             self.indicator.isHidden = true
+                            
+                            
+                            let alertController = UIAlertController(title: "Successfully Ad Posted", message: "Ad id is \(sellerDetails.addId)", preferredStyle: .alert)
+                            
+                            let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                              
+                            }
+                            alertController.addAction(action1)
+
+                            self.present(alertController, animated: true, completion: nil)
                           
                         })
                     }
