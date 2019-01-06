@@ -162,7 +162,7 @@ class NetworkManager: NSObject {
         var response: [AnyObject]?
         
         var listCarDetails: [ListedCarDetails] =   [ListedCarDetails]()
-       
+        
         
         do {
             response = try JSONSerialization.jsonObject(with: data, options: []) as? [AnyObject]
@@ -172,15 +172,15 @@ class NetworkManager: NSObject {
         }
         
         guard let array = response as? [AnyObject] else {
-           
+            
             return listCarDetails
         }
         for carInfoDi in array {
-           let carInfoDict = carInfoDi as! [String:AnyObject]
-           let ownerName = carInfoDict["ownerName"] as! String
-           let brand = carInfoDict["brand"] as! String
-           let model = carInfoDict["model"] as! String
-           let location = carInfoDict["location"] as! String
+            let carInfoDict = carInfoDi as! [String:AnyObject]
+            let ownerName = carInfoDict["ownerName"] as! String
+            let brand = carInfoDict["brand"] as! String
+            let model = carInfoDict["model"] as! String
+            let location = carInfoDict["location"] as! String
             let ownership = carInfoDict["ownership"] as! String
             let price = Int(carInfoDict["price"] as! String)!
             let kmsDriven = Int(carInfoDict["kmsDriven"] as! String)!
@@ -193,26 +193,25 @@ class NetworkManager: NSObject {
             
             let addId = carInfoDict["addId"] as! String
             
-           let listedCarDetails = ListedCarDetails()
+            let listedCarDetails = ListedCarDetails()
             listedCarDetails.ownerName = ownerName
-             listedCarDetails.brand = brand
-             listedCarDetails.model = model
-             listedCarDetails.location = location
-             listedCarDetails.ownership = ownership
-             listedCarDetails.price = price
-             listedCarDetails.kmsDrive = kmsDriven
-             listedCarDetails.carType = carType
-             listedCarDetails.engineType = eType
-             listedCarDetails.image = image
-             listedCarDetails.yearOfManufacture = yearOfManufacture
+            listedCarDetails.brand = brand
+            listedCarDetails.model = model
+            listedCarDetails.location = location
+            listedCarDetails.ownership = ownership
+            listedCarDetails.price = price
+            listedCarDetails.kmsDrive = kmsDriven
+            listedCarDetails.carType = carType
+            listedCarDetails.engineType = eType
+            listedCarDetails.image = image
+            listedCarDetails.yearOfManufacture = yearOfManufacture
             listedCarDetails.addId = addId
-             listedCarDetails.addId = addId
             listedCarDetails.pincode = pincode
             listCarDetails.append(listedCarDetails)
-           
-
+            
+            
         }
         
-       return listCarDetails
+        return listCarDetails
     }
 }
